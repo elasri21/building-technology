@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+:root {
+    /* project Colors */
+    --link-c: #474d75;
+    --dark-blue: #3a50f9;
+    --blue-sky: #38c0e7;
+    --green: #3dd2ae;
+    /*old colors*/
+    --main-color: #333;
+    --yellow: #ffc800;
+    --orange: #fba61b;
+    --pink: #ee4dc6;
+    --red: #fe4323;
+    --soft-red:#ffbea7;
+    --violet: #835fa8;
+    --black: #111;
+    --text-c: #555c66;
+    --bg-footer: #333;
+    --light-text: #808080;
+    --main-bg: #e5e5e5;/* icon bg */
+    --shadow: rgb(0 0 0 / 20%);
+    --input-border: #d9d9d9;
+    --link-bg: #b9c1cc;
+    --dark-grayish: #414c62;
+    --olive: #c4b35d;
+}
+/* global rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    margin: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+}
+@media (min-width: 922px) {
+    .container {
+        margin-left: 100px !important;
+        margin-right: 100px !important;
+    }
+}
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+/* start header */
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+    height: 74px;
+}
+header form input {
+    border: 1px solid white;
+}
+header .search input::placeholder {
+    color: var(--input-border);
+}
+header .search i {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+@media (max-width: 767px) {
+    header nav {
+        display: none;
+        position: absolute;
+        top: 74px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-footer);
+        padding: 30px;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li {
+        flex-basis: 100%;
+    }
+    header nav ul li a {
+        color: white !important;
+    }
+    header nav .close {
+        display: block !important;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+header nav ul li a {
+    color: var(--footer-bg);
+}
+header nav ul li a:hover {
+    color: var(--light-text);
+}
+header nav .close {
+    color: white;
+    display: none;
+}
+@media (max-width: 767px) {
+    header .open {
+        display: block !important;
+    }
+}
+header .open {
+    display: none;
+}
+/* end header */
+
+/* start landing*/
+.landing {
+    height: calc(100vh - 74px);
+    background-image: url("../images/landing.jpg");
+}
+@media (max-width: 500px) {
+    .landing .container .info h1 {
+        font-size: 30px !important;
+    }
+}
+.landing .container .info p {
+    max-width: 350px;
+}
+.landing .container .info a:hover {
+    background-color: white;
+    color: var(--dark-blue);
+}
+/* end landing *
+
+/* envirement */
+.envirement .container .boxes {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.envirement .container .boxes a:hover {
+    color: var(--dark-blue);
+    border-bottom-color: var(--dark-blue);
+}
+/* envirement */
+
+/* care-about */
+.care-about .container::before {
+    content: "";
+    height: 97%;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 20px;
+}
+@media (min-width: 768px) {
+    .care-about .container > div {
+        width: calc(50% -  15px);
+    }
+    .care-about .container > div img {
+        max-width: 500px;
+    }
+}
+@media (max-width: 767px) {
+    .care-about .container .bull{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.care-about .container .info a:hover {
+    background-color: var(--dark-blue);
+    color: white;
+}
+/* care-about */
+
+/* future */
+.future::before {
+    content: "";
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--dark-blue);
+}
+@media (min-width: 768px) {
+    .future .container > div {
+        width: calc(50% -  15px);
+    }
+    .future .container > div img {
+        max-width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .future .container .image {
+        order: 1;
+    }
+    .future .container .info {
+        order: 2;
+    }
+}
+@media (max-width: 767px) {
+    .future .container .bull{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.future .container .info a:hover {
+    background-color: white;
+    color: var(--dark-blue);
+}
+/* future */
+
+/* innovation */
+.innovation .container .box a:hover {
+    background-color: white;
+    color: var(--dark-blue);
+}
+/* innovation */
+
+/* construction */
+.construction::before {
+    content: "";
+    width: 50%;
+    height: 80%;
+    background-color: var(--dark-blue);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+}
+.construction .container .image-1 {
+    top: 0;
+    left: 0;
+}
+.construction .container .image-2 {
+    bottom: 0;
+    right: 0;
+}
+.construction .container .info {
+    max-width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.construction .container .info a:hover {
+    background-color: white;
+    color: var(--dark-blue);
+}
+/* construction */
+
+/* quote-container */
+.quote-container .container .profile {
+    top: -125px;
+}
+.quote-container .container .more-text a:hover {
+    background-color: var(--dark-blue);
+    color: white;
+}
+/* quote-container */
+
+/* services */
+@media (max-width: 767px) {
+    .services {
+        padding-bottom: 100px;
+    }
+}
+.services .container .image-1 {
+    top: -300px;
+}
+.services .container .info {
+    top: -200px;
+    max-width: 500px;
+}
+.services .container a:hover {
+    background-color: white;
+    color: var(--dark-blue);
+}
+@media (min-width: 768px) {
+    .services .container .image-2 {
+        position: absolute;
+        top: 100px;
+        right: 0;
+    }
+}
+/* services */
+
+/* contact */
+.contact .container .boxes {
+    top: -250px;
+}
+@media (min-width: 768px) {
+    .contact .container .form-container form {
+        width: calc(60% - 30px);
+    }
+    .contact .container .form-container .text {
+        width: 40%
+    }
+}
+.contact .container .boxes .box a:hover {
+    color: var(--dark-blue);
+    border-bottom-color: var(--dark-blue);
+}
+.contact .container .form-container form .field:focus::placeholder {
+    opacity: 0;
+}
+.contact .container .form-container form .submit:hover {
+    background-color: white;
+    color: var(--dark-blue);
+}
+.contact .container .form-container .text a i:hover {
+    color: var(--blue-sky);
+}
+/* contact */
+
+/* start footer */
+footer .text {
+    max-width: 500px;
+}
+footer a:hover {
+    color: var(--dark-blue);
+    text-decoration: underline;
+}
+/* end footer */
